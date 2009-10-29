@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY network "http://www.jpl.nasa.gov/pbm/ontology/network.owl#" >
+    <!ENTITY iml "http://www.jpl.nasa.gov/pbm/ontology/network.owl#iml:" >
+]>
+
+
+<rdf:RDF xmlns="http://www.jpl.nasa.gov/pbm/ontology/network.owl#"
+     xml:base="http://www.jpl.nasa.gov/pbm/ontology/network.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:iml="&network;iml:"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:network="http://www.jpl.nasa.gov/pbm/ontology/network.owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasApplication -->
+
+    <owl:ObjectProperty rdf:about="#hasApplication">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasPort -->
+
+    <owl:ObjectProperty rdf:about="#hasPort">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasService -->
+
+    <owl:ObjectProperty rdf:about="#hasService">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasSink -->
+
+    <owl:ObjectProperty rdf:about="#hasSink">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#hasSource -->
+
+    <owl:ObjectProperty rdf:about="#hasSource">
+        <rdfs:subPropertyOf rdf:resource="#relationalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#inDomain -->
+
+    <owl:ObjectProperty rdf:about="#inDomain">
+        <rdfs:subPropertyOf rdf:resource="#modifierProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#isType -->
+
+    <owl:ObjectProperty rdf:about="#isType">
+        <rdfs:subPropertyOf rdf:resource="#modifierProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#isWireless -->
+
+    <owl:ObjectProperty rdf:about="#isWireless">
+        <rdfs:subPropertyOf rdf:resource="#modifierProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#locatedAt -->
+
+    <owl:ObjectProperty rdf:about="#locatedAt">
+        <rdfs:subPropertyOf rdf:resource="#modifierProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#modifierProperty -->
+
+    <owl:ObjectProperty rdf:about="#modifierProperty"/>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#relationalProperty -->
+
+    <owl:ObjectProperty rdf:about="#relationalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#iml:Application -->
+
+    <owl:Class rdf:about="#iml:Application">
+        <rdfs:subClassOf rdf:resource="#iml:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#iml:Domain -->
+
+    <owl:Class rdf:about="#iml:Domain">
+        <rdfs:subClassOf rdf:resource="#iml:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#iml:Group -->
+
+    <owl:Class rdf:about="#iml:Group">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jpl.nasa.gov/pbm/ontology/network.owl#iml:TestExercise -->
+
+    <owl:Class rdf:about="#iml:TestExercise">
+        <rdfs:subClassOf rdf:resource="#iml:Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#iml:Application"/>
+            <rdf:Description rdf:about="#iml:Domain"/>
+            <rdf:Description rdf:about="#iml:TestExercise"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
